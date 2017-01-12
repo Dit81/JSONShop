@@ -1,0 +1,18 @@
+{                
+  "orderID": 12345,
+  "shopperName": "Ivan Ivanov",
+  "shopperEmail": "ivanov@cesis.ru",
+  "contents": [
+	{
+	  "productID": 34,
+	  "productName": "Product 1",
+	  "quantity": 1
+	},       
+	{
+	  "productID": 56,
+	  "productName": "Product 2",
+	  "quantity": 3
+	}          
+  ],
+  "orderCompleted": true
+}
