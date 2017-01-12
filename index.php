@@ -15,20 +15,19 @@ $cart = $json->jsonDecode();
 //echo $cart->contents[0]->productID . "<br>";
 //echo $cart->contents[0]->productName . "<br>";
 
-
-
-$page .= '<h1>Order ID: ' . $cart->orderID . '</h1>
-<h2>#' . $cart->contents[0]->productID . ' - ' . $cart->contents[0]->productName . '</h2>';
+$page .= '<h1>Order ID: ' . $cart->orderID . '</h1>';
 
 /*$posts = $cart->contents;
 echo '<pre>';
 var_dump($posts);
 echo '</pre>';*/
 
+$page .= '<ul>';
 for ($i=0; $i < count($cart->contents); $i++){
-	$page .= $cart->contents[$i]->productName . '<br>';
+	//$page .= '<li>' . $cart->contents[$i]->productName . '</li>';
+	$page .= '<li>#' . $cart->contents[$i]->productID . ' - ' . $cart->contents[$i]->productName . '</li>';
 }
-
+$page .= '</ul>';
 $page .= '</body></html>';
 echo $page; // Output HTML
 
